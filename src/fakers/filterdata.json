@@ -1,0 +1,22 @@
+[
+  {
+    "option": "Shop By",
+    "subOptions": ["Baby boy", "Baby Girl", "Kids Boy", "Kids Girl"]
+  },
+  {
+    "option": "Product type",
+    "subOptions": ["T-shirt", "Outwear", "Sweaters", "Outfits Sets", "Belts", "Pants", "Sleepwear", "Basics", "Swims"]
+  },
+  {
+    "option": "Price",
+    "subOptions": []
+  },
+  {
+    "option": "Age",
+    "subOptions": ["0-3 months", "3-6 Months", "6-9 Months", "9-12 Months", "12-15 Months", "15-18 Months", "18-21 Months", "21-24 Months"]
+  },
+  {
+    "option": "Store",
+    "subOptions": ["Donaldo", "Valida", "Hepta", "Baby ccino", "Body badu", "Ecolizer", "Halio", "Pecasso"]
+  }
+]
