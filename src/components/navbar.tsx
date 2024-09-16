@@ -41,7 +41,6 @@ const Navbar = () => {
   };
   const updateScreenWidth = () => {
     if (typeof window !== "undefined") {
-      console.log(window?.innerWidth);
       setScreenWidth(window?.innerWidth);
       if (window?.innerWidth <= 768) {
         setIsMobile(true);
@@ -66,7 +65,6 @@ const Navbar = () => {
     const item = menuItemsV2.find(
       (i) => i.title === title && i.parent === currentItems.header
     );
-    console.log(item, title);
     if (item?.items.length === 0) {
       return;
     }
@@ -79,13 +77,11 @@ const Navbar = () => {
     }
   };
   const onMenuClose = () => {
-    console.log(currentItems, "currentItem");
     if (currentItems.parent.length === 0) {
       setOpenMenu(false);
       return;
     } else {
       const item = menuItemsV2.find((i) => i.title === currentItems.parent);
-      console.log(currentItems, item);
       setCurrentItems({
         header: item?.title,
         parent: item?.parent,
@@ -136,7 +132,7 @@ const Navbar = () => {
               <div className="flex items-center lg:gap-2 sm:gap-1 w-full">
                 <SignIcon />
                 {!isMobile ? (
-                  <div className="flex items-center mt-[13px]">
+                  <div className="flex items-center">
                     <p className="text-[#666666] self-center font-GothamLight">
                       Sign Up/Sign In
                     </p>
@@ -163,7 +159,7 @@ const Navbar = () => {
             >
               <WishlistIcon />
               {!isMobile ? (
-                <h1 className="text-[#666666] hover:text-slate-700  mt-[13px]">
+                <h1 className="text-[#666666] hover:text-slate-700">
                   Wishlist
                 </h1>
               ) : null}
@@ -173,10 +169,10 @@ const Navbar = () => {
               href="/cart"
               className="flex items-center gap-2 cursor-pointer"
             >
-              <CartIcon />
-              {!isMobile ? (
-                <h1 className="text-[#666666]  mt-[13px]">Cart</h1>
-              ) : null}
+              <p>
+                <CartIcon />
+              </p>
+              {!isMobile ? <p className="text-[#666666]">Cart</p> : null}
             </Link>
           </div>
         </div>
